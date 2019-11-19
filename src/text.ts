@@ -2,7 +2,8 @@ import { Field } from "./field";
 import { html } from "lit-element";
 
 export class Text extends Field {
-  value;
+  readonly: boolean;
+  value: string;
 
   toString() {
     return `
@@ -14,7 +15,13 @@ export class Text extends Field {
     return html`
       <fieldset>
         <legend>${this.label}</legend>
-        <input name="${this.name}" type="text" .value=${this.value} />
+        <input
+          name="${this.name}"
+          type="text"
+          .value=${this.value}
+          ?readonly=${this.readonly}
+          ?disabled=${this.disabled}
+        />
       </fieldset>
     `;
   }

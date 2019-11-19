@@ -3,7 +3,7 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "target": "es2017",
+    "target": "esNext",
     "module": "esNext",
     "moduleResolution": "node",
     "lib": ["es2017", "dom"],

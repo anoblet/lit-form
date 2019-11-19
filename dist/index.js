@@ -3,7 +3,6 @@ import { html as html$1 } from 'lit-element';
 
 class Field {
     constructor(props) {
-        console.log("constructor", props.value);
         Object.assign(this, props);
     }
     toTemplateResult() {
@@ -51,7 +50,13 @@ class Text extends Field {
         return html$1 `
       <fieldset>
         <legend>${this.label}</legend>
-        <input name="${this.name}" type="text" .value=${this.value} />
+        <input
+          name="${this.name}"
+          type="text"
+          .value=${this.value}
+          ?readonly=${this.readonly}
+          ?disabled=${this.disabled}
+        />
       </fieldset>
     `;
     }

@@ -1,12 +1,12 @@
 import { html } from "lit-html";
 
 export class Field {
-  name: string;
+  disabled: boolean;
   label: string;
+  name: string;
   value: any;
 
   constructor(props) {
-    console.log("constructor", props.value);
     Object.assign(this, props);
   }
 
