@@ -5,10 +5,9 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "build": "rollup --config",
+    "build": "tsc",
     "save": "git add . && git commit -m \"Chore: Save\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "rollup --config -w"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -16,9 +15,6 @@
     "lit-html": "^1.1.2"
   },
   "devDependencies": {
-    "rollup": "^1.19.4",
-    "rollup-plugin-typescript2": "^0.22.1",
-    "tslib": "^1.10.0",
     "typescript": "^3.5.3"
   },
   "types": "dist/index.d.ts",

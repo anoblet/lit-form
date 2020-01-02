@@ -20,6 +20,7 @@ const generateField = field => {
 
 export class Form {
   fields: Field[] = [];
+  actions;
 
   constructor(props: {}) {
     Object.assign(this, props);
@@ -42,8 +43,7 @@ export class Form {
     return html`
       <form>
         ${this.fields.map(field => field.render())}
-        <button type="button">Reset</button
-        ><button type="button" @click=${this.onSubmit}>Submit</button>
+        ${this.actions.map(action => action.render())}
       </form>
     `;
   }
